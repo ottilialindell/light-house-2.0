@@ -1,0 +1,128 @@
+footer {
+    background-color: #E30C99;
+    bottom: 0;
+}
+
+.footer-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 9rem;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+}
+
+.footer-logo {
+    font-family: fonts.$main;
+    font-size: 20px;
+    letter-spacing: 0.7px;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-logo {
+    display: flex;
+    justify-content: center;
+    }
+}
+
+.footer-image {
+    width: 11em;
+    padding: 10px;
+}
+
+.footer-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-info {
+    display: flex;
+    flex-direction: column;
+    }
+}
+
+
+.footer-contact {
+    font-family: fonts.$main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    .footer-address {
+    padding: 3.5%;
+    }
+}
+
+.footer-ul {
+    list-style-type: none;
+    list-style: none;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.footer-ul li {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 27px;
+    color: #ffffff;
+}
+
+.footer-icons {
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 600px) {
+    .footer-icons {
+        width: 100%;
+        max-width: 60%;
+        padding: 2%;
+    }
+}
+
+/* GLÖM EJ HOVER EFFEKTER */
+
+.fa-instagram {
+    color:#FFFFFF;
+    font-size: 24px;
+}
+
+
+.fa-linkedin {
+    color:#FFFFFF;
+    font-size: 23px;
+}
+
+.fa-facebook-square {
+    color:#FFFFFF;
+    font-size: 23px;
+}
+
+.fa-twitter-square {
+    color:#FFFFFF;
+    font-size: 23px;
+}

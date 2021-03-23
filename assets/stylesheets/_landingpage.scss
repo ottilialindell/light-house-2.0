@@ -1,0 +1,145 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-family: fonts.$main;
+    font-size: 30px;
+    line-height: 46px;
+    color: #E30C99;
+}
+
+p {
+    font-family: fonts.$secondary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.about-wrapper {
+    width: 50%;
+    padding: 2rem;
+}
+
+.p-about {
+    color: #E30C99;
+}
+
+.news-wrapper {
+    background-color: #E30C99; 
+    width: 50%;
+    padding: 2rem;
+}
+
+.h2-news {
+    font-family: fonts.$main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 42px;
+    color: #F6B6E0;
+}
+
+.p-news {
+    color:white;
+}
+
+%button{
+    width: 20rem;
+    height: 4.1rem;
+    border-radius: 40px;
+}
+
+.button-contact {
+    @extend %button;
+    background: #F6B6E0;
+    font-family: fonts.$main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
+    color: #FFFFFF;
+    text-align: center;
+    border: none;
+    margin-top: 30px;
+
+    &:hover {
+        background: #E30C99;
+    }
+}
+
+.button-products {
+    @extend %button;
+    background: #FCE6F4;
+    font-family: fonts.$main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
+    color: #E30C99;
+    border:none;
+    padding: 5px;
+    margin-top: 30px;
+    &:hover {
+        background:#FFFFFF;
+    }
+}
+
+.esaias-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.esaias-container {
+    width: 80%;
+}
+
+.h3-esaias {
+    font-size: 30px;
+    line-height: 42px;
+    color: #F6B6E0;
+    margin-left: 20px;
+}
+
+.p-esaias {
+    line-height: 23px;
+    color: #E30C99;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.button-esaias {
+    @extend %button;
+    background: #FCE6F4;
+    font-family: fonts.$main;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 25px;
+    color: #E30C99;
+    border:none;
+    padding: 5px;
+    margin-top: 30px;
+    &:hover {
+        background:#FFFFFF;
+        opacity: 0.6;
+    }
+}
