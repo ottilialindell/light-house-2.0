@@ -12,15 +12,20 @@
 }
 
 .brand-title {
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
+@media (max-width: 400px) {
+  .brand-title {
+    width: 80%;
+  }
+}
 .navbar-links {
-  width: 70%;
+  width: 60%;
   display: flex;
   justify-content: center;
 }
@@ -56,7 +61,7 @@
 
 .toggle-button {
   position: absolute;
-  top: 3rem;
+  top: 1.5rem;
   right: 1rem;
   display: none;
   flex-direction: column;
@@ -127,6 +132,40 @@ body {
   padding: 0;
 }
 
+.flexbox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.flexbox__image {
+  flex: 1 100%;
+  z-index: 1;
+}
+.flexbox__news {
+  flex: 1;
+  padding: 2rem;
+  margin-top: -200px;
+  background-color: #E30C99;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.flexbox__about {
+  flex: 1;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .flexbox__news {
+    margin-top: auto;
+    width: 100%;
+  }
+
+  .flexbox__about {
+    width: 100%;
+  }
+}
 h1 {
   font-family: "Yeseva One", cursive;
   font-size: 30px;
@@ -142,30 +181,8 @@ p {
   line-height: 23px;
 }
 
-.wrapper {
-  display: flex;
-  width: 100%;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 1rem;
-}
-
-.about-wrapper {
-  width: 50%;
-  padding: 2rem;
-}
-
 .p-about {
   color: #E30C99;
-}
-
-.news-wrapper {
-  background-color: #E30C99;
-  width: 50%;
-  padding: 2rem;
 }
 
 .h2-news {
@@ -220,21 +237,35 @@ p {
 }
 
 .esaias-wrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .esaias-container {
-  width: 80%;
+  background-color: #FCE6F4;
+  margin-top: -150px;
+  padding: 5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.esaias-column {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.esaias-image {
+  z-index: 1;
 }
 
 .h3-esaias {
   font-size: 30px;
   line-height: 42px;
-  color: #F6B6E0;
+  color: #E30C99;
   margin-left: 20px;
 }
 
@@ -246,7 +277,7 @@ p {
 }
 
 .button-esaias {
-  background: #FCE6F4;
+  background: white;
   font-family: "Yeseva One", cursive;
   font-style: normal;
   font-weight: normal;
