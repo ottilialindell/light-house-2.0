@@ -1,0 +1,40 @@
+.about-flex {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #FCE6F4;
+}
+
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper-about-text {
+    padding: 2rem;
+}
+
+h3 {
+    font-family: fonts.$main;
+    font-size: 30px;
+    line-height: 46px;
+    color: #E30C99;
+}
+
+p {
+    font-family: fonts.$secondary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 23px;
+    color: #E30C99;
+}
+
+@media screen and (max-width: 700px) {
+    .about-flex {
+        flex-wrap: wrap;
+    }
+}

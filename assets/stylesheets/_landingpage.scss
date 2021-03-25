@@ -4,50 +4,49 @@ body {
     margin: 0;
     padding: 0;
 }
+* {
+    box-sizing: border-box;
+  }
 
-.flexbox {
+.container-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 33% 33% 33%;
+    height: 100%;
+}
+
+
+.grid_item__1 {
+    grid-area: 1/1/2/3;
+    z-index: 1;
+}
+
+.grid_item__2 {
+    grid-area: 1/1/4/2;
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-
-    &__image {
-        flex: 1 100%;
-        z-index: 1;
-    }
-
-    &__news {
-        flex: 1;
-        padding: 2rem;
-        margin-top: -200px;
-        background-color: #E30C99; 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        
-    }
-
-    &__about {
-        flex: 1;
-        padding: 2rem;
-    }
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1rem 1rem 3rem 1rem;
+    min-height: 104rem;
 }
 
-@media screen and (max-width: 600px) {
-    .flexbox__news {
-    margin-top: auto;
-    width: 100%;
-    }
-
-    .flexbox__about {
-        width: 100%;
-    }
+.grid_item__3 {
+    grid-area: 1/2/4/3;
+    background-color: #E30C99;
+    display: flex;
+    flex-direction:column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 1rem 1rem 3rem 1rem;
+    min-height: 104rem;
 }
+
 
 h1 {
     font-family: fonts.$main;
-    font-size: 30px;
-    line-height: 46px;
+    font-size: 3rem;
+    line-height: 4.6rem;
     color: #E30C99;
 }
 
@@ -55,8 +54,8 @@ p {
     font-family: fonts.$secondary;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 23px;
+    font-size: 1.8rem;
+    line-height: 2.3rem;
 }
 
 .p-about {
@@ -68,8 +67,8 @@ p {
     font-family: fonts.$main;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 3rem;
+    line-height: 4.2rem;
     color: #F6B6E0;
 }
 
@@ -78,9 +77,9 @@ p {
 }
 
 %button{
-    width: 20rem;
-    height: 4.1rem;
-    border-radius: 40px;
+    width: 37rem;
+    height: 6rem;
+    border-radius: 4rem;
 }
 
 .button-contact {
@@ -89,12 +88,12 @@ p {
     font-family: fonts.$main;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
     color: #FFFFFF;
     text-align: center;
     border: none;
-    margin-top: 30px;
+    margin-top: 3rem;
 
     &:hover {
         background: #E30C99;
@@ -107,55 +106,60 @@ p {
     font-family: fonts.$main;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
     color: #E30C99;
     border:none;
-    padding: 5px;
-    margin-top: 30px;
+    padding: 0.5rem;
+    margin-top: 3rem;
     &:hover {
         background:#FFFFFF;
     }
 }
 
-.esaias-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.esaias-container {
-    background-color: #FCE6F4;
-    margin-top: -150px;
-    padding: 5rem;
-    display: flex;
-    justify-content: center;
-}
-
-.esaias-column {
-    width: 70%;
-    display: flex;
-    flex-direction: column;
+.container-esaias {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 33% 33% 33%;
 }
 
 .esaias-image {
-    z-index: 1;
+    grid-area: 1/1/2/2;
+    z-index:1;
 }
 
+.wrapper-esaias {
+    grid-area: 1/1/4/2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 1rem 3rem 1rem;
+    min-height: 85rem;
+    background-color: #FCE6F4;
+    
+}
+
+.esaias-text {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
 .h3-esaias {
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 3rem;
+    line-height: 4.2rem;
     color: #E30C99;
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 
 .p-esaias {
-    line-height: 23px;
+    line-height: 2.3rem;
     color: #E30C99;
-    margin-top: 20px;
-    margin-left: 20px;
+    margin-top: 2rem;
+    margin-left: 2rem;
 }
 
 .button-esaias {
@@ -164,14 +168,94 @@ p {
     font-family: fonts.$main;
     font-style: normal;
     font-weight: normal;
-    font-size: 22px;
-    line-height: 25px;
+    font-size: 2.2rem;
+    line-height: 2.5rem;
     color: #E30C99;
     border:none;
-    padding: 5px;
-    margin-top: 30px;
+    padding: 0.5rem;
+    margin-top: 3rem;
     &:hover {
         background:#FFFFFF;
         opacity: 0.6;
     }
+}
+
+@media screen and (max-width: 1300px) {
+    .grid_item__2 {
+        min-height: 100rem;
+    }
+
+    .grid_item__3 {
+        min-height: 100rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .grid_item__2 {
+        min-height: 90rem;
+    }
+
+    .grid_item__3 {
+        min-height: 90rem;
+    }
+
+    .wrapper-esaias {
+        min-height: 70rem;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .grid_item__2 {
+        min-height: 80rem;
+    }
+
+    .grid_item__3 {
+        min-height: 80rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    %button{
+        width: 15rem;
+        height: 3rem;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    %button{
+        width: 12rem;
+        height: 2.4rem;
+        border-radius: 40px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .container-grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    }
+
+    .grid_item__2 {
+        min-height: auto;
+        height: 100%;
+    }
+
+    .grid_item__3 {
+        min-height: auto;
+        height: 100%;
+    }
+
+    .wrapper-esaias {
+        min-height: 55rem;
+    }
+
+    %button{
+        width: 37rem;
+        height: 6rem;
+        border-radius: 4rem;
+    }
+
 }
